@@ -1,11 +1,11 @@
-from jinja2 import Environment, PackageLoader, select_autoescape
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 import tomllib
 import json
 
 KPM_MANIFEST_VERSION = 1
 
 env = Environment(
-    loader=PackageLoader("build_index"),
+    loader=FileSystemLoader("index_builder/templates"),
     autoescape=select_autoescape()
 )
 
