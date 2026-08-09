@@ -4,25 +4,6 @@
   "name": "Homebrew to KPM",
   "description": "Self-hosted KPM repository for porting jailbroken-Kindle homebrew extensions to KPM packages.",
   "packages": {
-    "helloworld": {
-      "name": "Hello World",
-      "author": "TODO_YOUR_NAME",
-      "description": "Minimal test package to validate the install/launch/uninstall pipeline before porting real homebrew extensions.",
-      "artifacts": [
-        {
-          "url": "packages/helloworld/artifacts/helloworld_1.0.1_kindlehf.kpkg",
-          "version": [
-            1,
-            0,
-            1
-          ],
-          "dependencies": [],
-          "supported_platforms": [
-            "kindlehf"
-          ]
-        }
-      ]
-    },
     "bluetooth_toggle": {
       "name": "Bluetooth Toggle",
       "author": "GreenCat777",
@@ -83,14 +64,14 @@
     "sshd": {
       "name": "SSH Server (Persistent)",
       "author": "Mr.13",
-      "description": "Persistent SSH server. Reuses KOReader's bundled dropbear binary and host key, but launches it detached (setsid) so the session survives KOReader being closed. Requires KOReader installed. Start/Stop from the library. Root shell on port 2222.",
+      "description": "Persistent SSH server. Reuses KOReader's bundled dropbear binary and host key, but launches it detached (setsid) so the session survives KOReader being closed. Requires KOReader installed. Sessions land in /mnt/us with a writable HOME and kpm on PATH. Start/Stop from the library. Root shell on port 2222.",
       "artifacts": [
         {
-          "url": "packages/sshd/artifacts/sshd_1.0.0_kindlehf.kpkg",
+          "url": "packages/sshd/artifacts/sshd_1.0.1_kindlehf.kpkg",
           "version": [
             1,
             0,
-            0
+            1
           ],
           "dependencies": [],
           "supported_platforms": [

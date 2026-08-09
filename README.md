@@ -17,8 +17,6 @@ All packages target `kindlehf` (Kindle Paperwhite 10th gen / firmware 5.18,
 | **SSH Server (Persistent)** | `;kpm install sshd` | Persistent SSH (port 2222) reusing KOReader's bundled dropbear, launched detached so it survives KOReader closing. Requires KOReader installed. |
 | **Telnet** | `;kpm install telnet` | ⚠️ **Unauthenticated** root shell on port 23, unencrypted. Trusted local networks only. Tap the screen to stop. Author: Foskya. |
 
-(`helloworld` is also published as a pipeline test package — `;kpm install helloworld`.)
-
 ## Registering this repo on-device
 
 `;kpm add-repo <url>` does not work from the Kindle search bar (the
@@ -36,10 +34,3 @@ Then, from the Kindle search bar:
 ;kpm update
 ;kpm install <package-id>
 ```
-
-## Building
-
-Packages are built from source in the parent project with a dockerized
-`kpm-helper.py` (`./build.sh packages/<name> dist`). The repository index
-(`index.html`) is regenerated automatically on push by the GitHub Actions
-workflow in `.github/workflows/`.
