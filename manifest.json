@@ -79,6 +79,25 @@
           ]
         }
       ]
+    },
+    "sshd": {
+      "name": "SSH Server (Persistent)",
+      "author": "Mr.13",
+      "description": "Persistent SSH server. Reuses KOReader's bundled dropbear binary and host key, but launches it detached (setsid) so the session survives KOReader being closed. Requires KOReader installed. Start/Stop from the library. Root shell on port 2222.",
+      "artifacts": [
+        {
+          "url": "packages/sshd/artifacts/sshd_1.0.0_kindlehf.kpkg",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        }
+      ]
     }
   }
 }
